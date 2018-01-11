@@ -1,0 +1,441 @@
+
+
+body {background-image: url(../images/background.jpg); background-size: 100%; font-family: serif}
+
+/* Menyn */
+.menu_bar ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.menu_bar li {
+    float: left;
+    border-right: 1px solid #bbb;
+
+}
+#login, #logout, #user{
+	float: right;
+	border-left: 1px solid #bbb;
+}
+.menu bar li:last-child {
+	border-left: 1px solid #bbb;
+	
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    width: 65px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#user {
+	    display: inline-block;
+	    color: darkred;
+	    padding: 14px 16px;
+	    border: none;
+    }
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: green;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-content a:hover {background-color: grey;}
+
+.dropdown:hover .dropdown-content {
+	    display: block;
+}
+
+a#active, #active2{
+	background-color: green;
+	color: white;
+}
+
+/* olika inställning för textstorlek beroende på screen */
+@media screen and (min-width: 800px) {
+.grid12-6{
+	position: relative;
+	font-size: 1vw;
+	}
+}
+
+@media screen and (max-width: 800px) {
+.grid12-6{
+	position: relative;
+	font-size: 9px;
+	}
+}
+
+/* layout för transparent box */
+.grid12-6 .inner_box{
+	background: rgba(255,255,255,0.85);
+	margin-top: 10%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 10%;
+	text-align: center;
+	padding: 7%;	
+}
+
+.grid12-6 .inner_box2{
+	background: rgba(255,255,255,0.85);
+	margin-top: 5%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 5%;
+	text-align: center;
+	padding: 7%;	
+}
+/* länk på välkomstsidan */
+.grid12-6 .inner_box a, .grid12-6 .inner_box2 a{
+	    color: red;
+        text-decoration: none;
+}
+
+.grid12-6 .inner_box2 a:hover, .grid12-6 .inner_box a:hover{
+	color: darkred;
+} 
+
+/* allmänna text "inställningar i boxen" */
+.grid12-6 .inner_box h1{font-size: 400%; font-family: serif;}
+.grid12-6 .inner_box h2{font-size: 200%; font-family: serif;}
+
+.grid12-6 .inner_box2 h3{padding-bottom: 3%;}
+
+
+/* allmänna inställningar för boxen i receptsidorna */
+.grid12-6 .inner_box_recipe{
+	background: rgba(255,255,255,0.90);
+	margin-top: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 1%;
+	text-align: center;
+	padding: 5%;
+	
+}
+
+/* ändra bildens storlek och läge beroende på screen */
+@media screen and (min-width: 600px) {
+.grid12-6 .inner_box_recipe img{
+
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 35%;
+	margin-left: -5%;
+	margin-top: 5%;
+	margin-right: 5%;
+	
+	}
+}
+
+@media screen and (max-width: 599px) and (min-height: 399px) {
+.grid12-6 .inner_box_recipe img{
+
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 60%;
+	
+	margin-top: 5%;
+	margin-right: 5%;
+	
+	}
+}
+
+@media screen and (max-width: 599px) and (max-height: 400px) {
+.grid12-6 .inner_box_recipe img{
+
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width:45%;
+	
+	margin-top: 5%;
+	margin-right: 5%;
+	
+	}
+}
+
+/* Placerar elementen högst upp */
+.grid12-6 .inner_box_recipe img, .text{
+	vertical-align:top;
+
+}
+
+/* Inställningar för elementen i text-blocket för receptsidorna*/
+.text{
+	display:inline-block;
+	margin-top: 5%;
+	padding-bottom: 5%;
+}
+
+/* Listegenskaper för tillagningen mm*/
+.grid12-6 .inner_box_recipe>ul{
+	list-style-type: decimal; 
+	padding-left: 10%; 
+	padding-right: 10%;
+	padding-bottom: 3%;
+	padding-top: 3%
+}
+.inner_box_recipe>div>ul{
+    list-style-type: circle; 
+}
+
+/* text-egenskaper receptsidorna */
+.text ul li{font-size: 100%; font-family: serif; text-align: left;}
+	
+
+.grid12-6 .inner_box_recipe h1{font-size: 50px; font-family: serif;}
+
+.grid12-6 .inner_box_recipe .text>h2{font-size: 25px; font-family: serif; text-align: left; padding-bottom: 6%; padding-top: 3%;}
+
+
+.grid12-6 .inner_box_recipe li{font-size: 20px; font-family: serif; text-align: left;}
+.grid12-6 .inner_box_recipe>h3{font-size: 25px; font-family: serif; text-align: left; padding-left: 9%;}
+.grid12-6 .inner_box_recipe h2{font-size: 25px; font-family: serif; text-align: left; padding-bottom: 2%; padding-top: 3%;}
+
+
+
+/* Kalendersidan. olika storlek på texter och divar beroende på screen */
+.calendar_box h1{ font-size: 500%; text-align: center; padding: 1%; margin-left: 2.2%;  color: white;}
+
+@media screen and (min-width: 1150px) {
+.grid12-6 .calendar div {width: 12%; height: 100px; float: left; border: 1px solid gray; text-align: left; font-size: 300%; background: white;}
+.calendar h2{  width: 12%;  height: 50%;  float: left; border: 1px solid gray; border-bottom: 2px solid black; border-top: 2px solid black; background-color: green; text-align: center; font-size: 250%; padding-top: 1%; padding-bottom: 1%;} 
+
+}
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+.grid12-6 .calendar div {width: 12%; height: 75px; float: left; border: 1px solid gray; text-align: left; font-size: 300%; background: white;}
+.calendar h2{  width: 12%;  height: 50%;  float: left; border: 1px solid gray; border-bottom: 2px solid black; border-top: 2px solid black; background-color: green; text-align: center; font-size: 250%; padding-top: 1%; padding-bottom: 1%;} 
+
+}
+@media screen and (max-width: 700px){
+.grid12-6 .calendar div {width: 11%; height: 40px; float: left; border: 1px solid gray; text-align: left; font-size: 200%; background: white;}
+.calendar h2{  width: 11%;  height: 50%;  float: left; border: 1px solid gray; border-bottom: 2px solid black; border-top: 2px solid black; background-color: green; text-align: center; font-size: 150%; padding-top: 1%; padding-bottom: 1%;} 
+.calendar_box h1{font-size: 250%;}
+}
+
+
+/* cell egenskaper i kalendern*/
+h2#v1{clear: left; margin-left:7%}
+div#d1{clear: left; margin-left: 7%} 
+div#d8{clear: left; margin-left: 7%} 
+div#d15{clear: left; margin-left: 7%} 
+div#d22{clear: left; margin-left: 7%} 
+div#d29{clear: left; margin-left: 7%}
+div#d6 {background-position: bottom; background-size: cover;}
+div#d23 {background-position: center; background-size: cover;}
+div#d35 {margin-bottom: 10%;}
+
+.calendar div a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: black;
+}
+
+.calendar div a:hover{
+	background-color: rgba(255,255,255,0.5);}
+	
+/* egenskaper kommentarsfält på receptsidorna, delar upp delarna för att kunna hantera deras layout separat */	
+.grid12-6 .inner_box_recipe .comment>p{text-align: left; font-size: 15px; padding-bottom: 1%;}
+.grid12-6 .inner_box_recipe .comment>p#author{text-align: left; font-weight: bold; font-size: 17px; padding-top: 1%;}
+/*.grid12-6 .inner_box_recipe .comment>h3, .grid12-6 .inner_box_recipe .comment>form>h3{text-align: left; font-weight: bold; font-size: 17px; padding-top: 1%;}
+
+p#author{text-align: left; font-weight: bold; font-size: 17px; padding-top: 1%;} */
+
+.grid12-6 .comment>h2{font-size: 25px; padding-top: 2%; text-align: left;}
+
+
+.grid12-6 .logIn>h2{font-size: 20px; text-align: left;}
+.grid12-6 .logIn h3{font-size: 15px; padding-top: 5%; text-align: left;}
+
+.nickName, .password{
+	position: relative;
+	display: block;
+    	text-align: left;
+    	font-size: 15px;
+    	padding-top: 2%;
+    	padding-bottom: 2%;
+    	padding-right: 1%;
+    	
+	}
+	
+.textarea{
+	display:block;
+	font-size: 15px;
+	text-align: left;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 1%;
+	}
+	
+.submit, .cancel{
+	display: block;
+	text-align: left;
+    padding-bottom: 2%;
+	
+	}
+	
+.delet{
+	display: block;
+	text-align: left;
+    padding-bottom: 3%;
+	
+	}
+input[type=text] {
+	width:100%;
+	font-size: 15px;
+	padding: 1%;
+	border: none;
+	border-radius: 2px;
+}
+
+input[type=password] {
+	width:100%;
+	font-size: 15px;
+	padding: 1%;
+	border: none;
+	border-radius: 2px;
+}
+	
+
+#entry{
+width: 100%;
+}
+
+/* Kommentarinställning för olika screens */ 
+@media screen and (min-width: 700px)  {
+.comment{
+	background-color: lightgray;
+	padding: 2%;
+	width: 60%;
+	margin-top: 10%;
+	margin-left: 10%;
+	
+	}
+}
+
+@media screen and (max-width: 700px)  {
+.comment{
+	background-color: lightgray;
+	padding: 2%;
+	width: 75%;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	}
+}
+.comment p{text-align: left; margin-bottom: -1%;}
+
+
+.comment h5{text-align: left; font-weight: bold; margin-top: 2%}
+
+/* Kommentarinställning för olika screens */ 
+@media screen and (min-width: 700px)  {
+.logIn, .register{
+	background-color: lightgray;
+	
+	width: 40%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
+	
+	
+	text-align: center;
+	
+	}
+}
+
+@media screen and (max-width: 700px)  {
+.logIn, .register, .logOut{
+	background-color: lightgray;
+	padding: 2%;
+	width: 90%;
+	margin-top: 10%;
+	margin-left: 3%;
+	margin-right: 3%;
+	
+	}
+}
+.register h3{
+	font-size: 15px;
+	}
+.register h2{
+	font-size: 22px;
+	}
+
+	
+.logIn h4{
+	padding-top: 10%;
+	font-size: 20px;
+	text-align: center;
+}
+.logIn h5, .register h5{
+	padding-top: 10%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.register a, .youAreLoggedIn a{
+	color: red;
+    	text-decoration: none;
+    	
+}
+
+.register a, .youAreLoggedIn a:hover{
+	color: darkred;
+}
+
+
+.youAreLoggedIn h4{
+	font-size: 30px;
+	}
+.youAreLoggedIn h5{
+	font-size: 20px;
+	}
+.logOut h2{
+	font-size: 30px;
+	}
+.logOut h3{
+	font-size: 25px;
+	padding: 2%;
+	}
+.deletbutton{
+    float: left;
+}
+

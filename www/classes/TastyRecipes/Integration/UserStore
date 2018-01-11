@@ -1,0 +1,65 @@
+<?php
+
+namespace Chat\Integration;
+
+use Chat\Model\Entry;
+
+/**
+ * Handles the file where entries in the chat conversation are stored.
+ */
+class ConversationStore {
+
+    private const FILE_NAME = 'conversation.txt';
+    private const PATH_TO_APP_ROOT = '/../../../';
+
+    private $filePath;
+
+    public function __construct() {
+        $this->filePath = __DIR__ . self::PATH_TO_APP_ROOT . self::FILE_NAME;
+    }
+
+    /**
+     * @return array The entire conversation.
+     */
+    public function getConversation() {
+        $entries = array();
+        $entriesInFile = explode(CHAT_ENTRY_DELIMITER, file_get_contents($this->filePath));
+        foreach ($entriesInFile as $entryInFile) {
+            $entry = unserialize($entryInFile);
+            if ($entry instanceof Entry and !$entry->isDeleted()) {
+                array_unshift($entries, $entry);
+            }
+        }
+        return $entries;
+    }
+
+
+    /**
+     * Delete the entry with the specified timestamp.
+     * 
+     * @param int $timestamp The timestamp of the entry that shall be deleted.
+     */
+    public function deleteEntry(int $timestamp) {
+        $entriesAfterDeletion = array();
+        $entriesInFile = explode(CHAT_ENTRY_DELIMITER, file_get_contents($this->filePath));
+        foreach ($entriesInFile as $entryInFile) {
+            $entry = unserialize($entryInFile);
+            if ($entry instanceof Entry and $entry->getTimestamp() === $timestamp) {
+                $entry->setDeleted(true);
+            }
+            array_push($entriesAfterDeletion, serialize($entry));
+        }
+        file_put_contents($this->filePath, implode(CHAT_ENTRY_DELIMITER, 
+                                             $entriesAfterDeletion) . CHAT_ENTRY_DELIMITER);
+    }
+
+    /**
+     * Appends a new entry to the current conversation.
+     * 
+     * @param \Chat\Model\Entry $entry The entry to append.
+     */
+    public function addEntry(Entry $entry) {
+        \file_put_contents($this->filePath, 
+                           \serialize($entry) . CHAT_ENTRY_DELIMITER, FILE_APPEND);
+    }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cookbook version="46">
+    <recipe>
+        <title>Pancakes</title>
+        <ingredient>
+            <li>1 egg</li>
+            <li>3/4 cup milk</li>
+            <li>2 tablespoons butter, melted</li>
+            <li>1 cup flour</li>
+            <li>1 tablespoon sugar</li>
+            <li>1 teaspoon baking powder</li>
+            <li>1/2 teaspoon salt</li>
+        </ingredient>
+        <recipetext>
+            <li>Beat egg until fluffy.</li>
+            <li>Add milk and melted margarine.</li>
+            <li>Add dry ingredients and mix well.</li>
+            <li>Heat a heavy griddle or fry pan which is greased with a little butter on a paper towel.</li>
+            <li>The pan is hot enough when a drop of water breaks into several smaller balls which 'dance' around the pan.</li>
+            <li>Pour a small amount of batter (approx 1/4 cup) into pan and tip to spread out or spread with spoon.</li>
+            <li>When bubbles appear on surface and begin to break, turn over and cook the other side.</li>
+        </recipetext>
+    </recipe>
+    <recipe>
+        <title>Meatballs</title>
+        <ingredient>
+            <li>1 lb lean (at least 80%) ground beef</li>
+            <li>1/2 cup bread crumbs</li>
+            <li>1/4 cup milk</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/2 teaspoon Worcestershire sauce</li>
+            <li>1/4 teaspoon pepper</li>
+            <li>1 small onion, finely chopped</li>
+            <li>1 egg</li>
+        </ingredient>
+        <recipetext>
+            <li>Heat oven to 400F. Line 13x9-inch pan with foil; spray with cooking spray.</li>
+            <li>In large bowl, mix all ingredients. Shape mixture into 20 to 24 (1 1/2-inch) meatballs. Place 1 inch apart in pan.</li>
+            <li>Bake uncovered 18 to 22 minutes or until no longer pink in center. </li>
+        </recipetext>
+    </recipe>
+</cookbook>
